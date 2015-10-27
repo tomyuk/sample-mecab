@@ -50,3 +50,4 @@ group :production do
 end
 
 gem 'mecab' , '0.996'
+gem 'natto'
