@@ -3,3 +3,10 @@
 
 
 <%= @text %>
+<% nm = Natto::MeCab.new %>
+<%= nm %>
+<% nm.parse(@text) do |n| %>
+  <pre>
+    <%= "#{n.surface}\t#{n.feature}" %>
+  </pre>
+<% end %>
